@@ -4,8 +4,8 @@ from api.base import RequestDto
 
 
 class RequestCreateEmployeeDtoSchema(Schema):
-    first_name = fields.Str(require=True, allow_none = False)
-    last_name = fields.Str(require=True, allow_none = False)
+    first_name = fields.Str(required=True, allow_none = False)
+    last_name = fields.Str(required=True, allow_none = False)
 
 class RequestCreateEmployeeDro(RequestDto, RequestCreateEmployeeDtoSchema):
     __schema__ = RequestCreateEmployeeDtoSchema
